@@ -3,14 +3,15 @@ import MovieList from "../components/MovieList";
 import { useFavorites } from "../context/favorites-context";
 import { getMoviesByIds } from "../services/api";
 
+
 export default function Favorites() {
     const { favorites } = useFavorites();
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
         getMoviesByIds(favorites).then(data => {
-            setMovies(data.titles)
-        })
+            setMovies(data);
+        });
     }, [favorites]);
 
     return (
