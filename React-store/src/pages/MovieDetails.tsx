@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"; 
-import { useParams, useNavigate } from "react-router-dom"; 
+import { useParams, useNavigate, data } from "react-router-dom"; 
 import { getMovieById } from "../services/api";
 import { useFavorites } from "../context/favorites-context";
 

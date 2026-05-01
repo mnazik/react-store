@@ -46,7 +46,7 @@ import { addToFavorites, getFavorites, removeFromFavorites } from '../services/f
                                 <h3>{movie.originalTitle}</h3>
                             </Link>
                             {favorites(). includes(movie.id) ? (
-                                <button onClick={() => removeFromFavorites(movie.id)} className='p-3 bg-red-900 text-white'>Удфлить из избранное</button>
+                                <button onClick={() => removeFromFavorites(movie.id)} className='p-3 bg-red-900 text-white'>Удалить из избранное</button>
                             ) : (  
                                 <button onClick={() => addToFavorites(movie.id)} className='p-3 bg-red-500 text-white'>Добавить в избранное</button>
                             )} 

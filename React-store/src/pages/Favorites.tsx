@@ -1,6 +1,6 @@
-import { useffect, useState } from "react"; import MoviesList from "../components/MoviesList";
+import { useEffect, useState } from "react"; import MoviesList from "../components/MoviesList";
 import { useFavorites } from "../context/favorites-context";
-import { getMoviesbyIds } from "../services/api";
+import { getMoviesByIds } from "../services/api";
 
 
 
@@ -9,7 +9,7 @@ export default function Favorites() {
     const [movies, setMovies] = useState([])
     
     useEffect ( () => {
-            getMoviesbyIds (favorites). then (data => {
+            getMoviesByIds (favorites). then (data => {
                 setMovies(data);
             })
     }, [favorites])
